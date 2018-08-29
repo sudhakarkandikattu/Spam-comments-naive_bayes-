@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<h1 style="background:#03A9F4;#35434a;border-bottom:#448AFF 3px solid;height:50px;text-align: center;">spam detector</h1>
+	<div style="float:left;">
+		<video style="float=left;display:inline;" controls="play" width="720" height="480"  width="320" height="240" >
+        <source src="static/sudha.mp4" type="video/mp4">
+        </video>
+	</div>
+   {% if prediction == 1%}
+		<h1 style="float=right;display:inline;"> {{name}} </h1><h6 style="color:red;float=left;display:inline;">Spam </h6>
+		{% elif prediction == 0%}
+		<h1 style="float=right;display:inline;"> {{name}} </h1><h6 style="color:blue;float=left;display:inline;">Not a Spam </h6>
+		{% endif %}
+	<div style="float:right;padding-right: 0px ">
+		
+	</div>
+    
+
+	
+
+	
+	
+
+</body>
+</html>
+
